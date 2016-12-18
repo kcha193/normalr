@@ -14,5 +14,5 @@ normaliseData <-
   function(data, lambdas){
     stopifnot(is.data.frame(data) | is.numeric(lambdas))
 
-    apply(rbind(lambdas, data), 2, function(x) normalise(x[-1], x[1]))
+    as.data.frame(apply(rbind(lambdas, data), 2, function(x) normalise(x[-1], x[1])))
   }
