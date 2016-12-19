@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' normaliseData(mtcars, getLambda(mtcars))
+#' normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))
 normaliseData <-
   function(data, lambdas){
     stopifnot(is.data.frame(data) | is.numeric(lambdas))

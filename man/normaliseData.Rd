@@ -18,6 +18,6 @@ a data frame
 Apply normalisation on a data frame using specific Lambda value
 }
 \examples{
-normaliseData(mtcars, getLambda(mtcars))
+normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))
 }
 

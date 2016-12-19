@@ -1,9 +1,7 @@
-
-
-#' Apply normalisation on a numeirc vector using specific Lambda value
+#' Apply normalisation on a numeric vector using a specific Lambda value
 #'
 #' @param x a numeric vector to be normalised.
-#' @param lambda  a numeric vector from the \link[MASS]{boxcox} function
+#' @param lambda a numeric vector from the \link[MASS]{boxcox} function
 #'
 #' @return a numeric vector
 #' @export

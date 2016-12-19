@@ -2,7 +2,7 @@
 % Please edit documentation in R/normalise.R
 \name{normalise}
 \alias{normalise}
-\title{Apply normalisation on a numeirc vector using specific Lambda value}
+\title{Apply normalisation on a numeric vector using a specific Lambda value}
 \usage{
 normalise(x, lambda = 3)
 }
@@ -15,7 +15,7 @@ normalise(x, lambda = 3)
 a numeric vector
 }
 \description{
-Apply normalisation on a numeirc vector using specific Lambda value
+Apply normalisation on a numeric vector using a specific Lambda value
 }
 \examples{
 x <- c(1, 5, 9, 9, 9, 9, 10, 10, 10, 11, 11, 12)

@@ -4,12 +4,14 @@
 \alias{getLambda}
 \title{Get Optimal Lambda value}
 \usage{
-getLambda(data, lambda = seq(-10, 10, 1/100))
+getLambda(data, lambda = seq(-10, 10, 1/100), parallel = TRUE)
 }
 \arguments{
-\item{data}{a data frame containing the variables.}
+\item{data}{a data frame containing the variables of numeric or integer vectors.}
 
-\item{lambda}{vector of values of lambda – default (-10, 10) in steps of 0.01.}
+\item{lambda}{a vector of values of lambda – default (-10, 10) in steps of 0.01.}
+
+\item{parallel}{perform the computation in parallel, default setting is TRUE.}
 }
 \value{
 a numeric vector
@@ -18,6 +20,7 @@ a numeric vector
 Computes optimal lambda value using \link[MASS]{boxcox} function from the provided data.
 }
 \examples{
-getLambda(mtcars)
+\dontrun{ getLambda(mtcars)}
+getLambda(mtcars, parallel = FALSE)
 }
 
