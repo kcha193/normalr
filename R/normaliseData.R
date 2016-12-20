@@ -1,5 +1,4 @@
 
-
 #' Apply normalisation on a data frame using specific Lambda value
 #'
 #' @param data a data frame containing the variables.
