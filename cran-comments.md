@@ -1,3 +1,6 @@
+This is a resubmission. Compared to the last submission, I have:
+* Add the DOIs for the reference in the description section of description file.
+---
 ## Test environments
 * local OS X install, R 3.3.2
 * ubuntu 12.04 (on travis-ci), R 3.3.2
@@ -13,4 +16,5 @@
 
 This is a new release, so there are no reverse dependencies.
 
+---
 
