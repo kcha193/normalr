@@ -18,6 +18,7 @@ a data frame
 Apply normalisation on a data frame using specific Lambda value
 }
 \examples{
+\dontrun{normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))}
 normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))
 }
 

@@ -9,6 +9,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))}
 #' normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))
 normaliseData <-
   function(data, lambdas){

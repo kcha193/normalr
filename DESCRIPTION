@@ -8,7 +8,7 @@ Description: The robustness of many of the statistical techniques, such as facto
           with real data, these assumptions are often not met. The Box-Cox transformation (Box & Cox, 1964) 
           provides an optimal transformation for non-normal variables. Yet, for large datasets of continuous 
           variables, its application in current software programs is cumbersome with analysts having to take 
-          several steps to normalise each variable. We present R package normalr that enables researchers 
+          several steps to normalise each variable. We present an R package normalr that enables researchers 
           to make convenient optimal transformations of multiple variables in datasets. This R package 
           enables users to quickly and accurately: (1) anchor all of their variables at 1.00, (2) select 
           the desired precision with which the optimal lambda is estimated, (3) apply each unique exponent 
