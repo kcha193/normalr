@@ -24,5 +24,5 @@ The following example uses normalr to normalise 11 continous variables in mtcars
 ```R
 library(normalr)
 
-normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))
+normaliseData(mtcars, getLambda(mtcars))
 ```
