@@ -1,6 +1,6 @@
 Package: normalr
 Title: Normalisation of Multiple Variables in Large-Scale Datasets
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(person("Kevin", "Chang", email = "k.chang@auckland.ac.nz", role = c("aut", "cre")), 
              person("Matthew", "Courtney", email = "matthew.courtney@unimelb.edu.au", role = c("aut")))
 Description: The robustness of many of the statistical techniques, such as factor analysis, applied in 
@@ -25,7 +25,8 @@ Imports:
     parallel,
     purrr,
     magrittr,
-    ddR
+    ddR,
+    shiny
 Suggests:
     testthat,
     covr

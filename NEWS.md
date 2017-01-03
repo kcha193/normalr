@@ -5,5 +5,7 @@
   * `normalise()` normalised a numeric vector with the specific lambda value.
   * `normaliseData()` applies the normalisation on a dataset with multiple continous variables.
 
+# normalr 0.0.2
 
+* add the shiny app using `normalrShiny()`.
 

@@ -3,6 +3,8 @@
 export(getLambda)
 export(normalise)
 export(normaliseData)
+export(normalrShiny)
+import(shiny)
 importFrom(ddR,collect)
 importFrom(ddR,dlapply)
 importFrom(magrittr,"%>%")

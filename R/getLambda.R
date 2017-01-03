@@ -34,7 +34,8 @@ getLambda <-
     lambdasList <-
       if(parallel){
         formulaList %>% ddR::dlapply(function(x)
-          MASS::boxcox(x, data = data, lambda = lambda, plotit = FALSE), nparts = parallel::detectCores()) %>%
+          MASS::boxcox(x, data = data, lambda = lambda, plotit = FALSE),
+                nparts = parallel::detectCores()) %>%
           ddR::collect()
       } else {
         formulaList %>% purrr::map(function(x)
