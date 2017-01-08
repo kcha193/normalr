@@ -39,3 +39,4 @@ library(normalr)
 
 normalrShiny()
 ```
+The shiny app is also available from [shinyapps.io](https://kcha193.shinyapps.io/normalr/).
