@@ -16,7 +16,7 @@ Description: The robustness of many of the statistical techniques, such as facto
           original X1 and X(n) ranges, and (5) provide original and transformed estimates of skewness, 
           kurtosis, and other inferential assessments of normality.
 Depends:
-    R (>= 3.3.2)
+    R (>= 3.3.0)
 License: GPL
 Encoding: UTF-8
 LazyData: true
