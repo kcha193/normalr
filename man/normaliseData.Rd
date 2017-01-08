@@ -4,10 +4,10 @@
 \alias{normaliseData}
 \title{Apply normalisation on a data frame using specific Lambda value}
 \usage{
-normaliseData(data, lambdas)
+normaliseData(dat, lambdas)
 }
 \arguments{
-\item{data}{a data frame containing the variables.}
+\item{dat}{a data frame containing the variables.}
 
 \item{lambdas}{a numeric vector from the \link[MASS]{boxcox} function}
 }

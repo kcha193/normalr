@@ -24,7 +24,13 @@ normalise <- function(x, lambda = 3){
         }
         temp+(1-min(temp)) #pegged
     }else{
-      x^lambda
+      if(min(x) <= 0){
+        temp <- x + (1-min(x)) #anchor
+        temp <- (temp^(lambda)) #applied and reflected
+      } else {
+        temp <- (x^(lambda)) #applied and reflected
+      }
+      temp+(1-min(temp)) #pegged
     }
   scaled <- ((max(x) - min(x))/(max(transX) - min(transX)))
 

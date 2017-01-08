@@ -4,10 +4,10 @@
 \alias{getLambda}
 \title{Get Optimal Lambda value}
 \usage{
-getLambda(data, lambda = seq(-10, 10, 1/100), parallel = TRUE)
+getLambda(dat, lambda = seq(-10, 10, 1/100), parallel = TRUE)
 }
 \arguments{
-\item{data}{a data frame containing the variables of numeric or integer vectors.}
+\item{dat}{a data frame containing the variables of numeric or integer vectors.}
 
 \item{lambda}{a vector of values of lambda – default (-10, 10) in steps of 0.01.}
 

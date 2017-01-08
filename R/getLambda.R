@@ -3,7 +3,7 @@
 #'
 #'Computes optimal lambda value using \link[MASS]{boxcox} function from the provided data.
 #'
-#' @param data a data frame containing the variables of numeric or integer vectors.
+#' @param dat a data frame containing the variables of numeric or integer vectors.
 #' @param lambda a vector of values of lambda – default (-10, 10) in steps of 0.01.
 #' @param parallel perform the computation in parallel, default setting is TRUE.
 #'
@@ -19,35 +19,42 @@
 #' \dontrun{ getLambda(mtcars)}
 #' getLambda(mtcars, parallel = FALSE)
 getLambda <-
-  function(data, lambda = seq(-10, 10, 1/100), parallel = TRUE){
-    stopifnot(is.data.frame(data))
+  function(dat, lambda = seq(-10, 10, 1/100), parallel = TRUE){
+    stopifnot(is.data.frame(dat))
 
-    stopifnot(ncol(data) > 1)
+    dat <- purrr::keep(dat, purrr::is_numeric)
 
-    data <- purrr::keep(data, purrr::is_numeric)
-
-    data <- data.frame(apply(rbind(1 - apply(data, 2, min), data), 2, function(x) x[1] + x[-1])) #anchor at 1
+    dat <- data.frame(apply(rbind(1 - apply(dat, 2, min), dat), 2, function(x) x[1] + x[-1])) #anchor at 1
 
     formulaList <-
-      names(data) %>%
-      purrr::map(function(x)
-        as.formula(paste(x, paste(names(data)[!names(data) %in% x], collapse = "+"), sep = "~")))
+      if(ncol(dat) == 1){
+        as.formula(paste(names(dat), 1, sep = "~"))
+      }else{
+        names(dat) %>%
+          purrr::map(function(x)
+            as.formula(paste(x, paste(names(dat)[!names(dat) %in% x], collapse = "+"), sep = "~")))
+      }
 
     lambdasList <-
-      if(parallel){
+      if(ncol(dat) == 1){
+        MASS::boxcox(formulaList, data = dat, lambda = lambda, plotit = FALSE)
+      } else if(parallel){
         formulaList %>% ddR::dlapply(function(x)
-          MASS::boxcox(x, data = data, lambda = lambda, plotit = FALSE),
-                nparts = min(parallel::detectCores(), ncol(data))) %>%
+          MASS::boxcox(x, data = dat, lambda = lambda, plotit = FALSE),
+                nparts = min(parallel::detectCores(), ncol(dat))) %>%
           ddR::collect()
       } else {
         formulaList %>% purrr::map(function(x)
-          MASS::boxcox(x, data = data, lambda = lambda, plotit = FALSE))
+          MASS::boxcox(x, data = dat, lambda = lambda, plotit = FALSE))
       }
 
     lambdas <-
-      lambdasList %>%
-      purrr::map_dbl(function(k) k$x[ which(k$y == max(k$y))])
-
+      if(ncol(dat) == 1){
+        lambdasList$x[ which(lambdasList$y == max(lambdasList$y))]
+      } else {
+        lambdasList %>%
+          purrr::map_dbl(function(k) k$x[ which(k$y == max(k$y))])
+      }
     return(lambdas)
   }
 
