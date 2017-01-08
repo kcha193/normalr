@@ -22,9 +22,11 @@ getLambda <-
   function(data, lambda = seq(-10, 10, 1/100), parallel = TRUE){
     stopifnot(is.data.frame(data))
 
+    stopifnot(ncol(data) > 1)
+
     data <- purrr::keep(data, purrr::is_numeric)
 
-    data <- data.frame(apply(rbind(1 - apply(data, 2, min), data), 2, function(x) x[1] + x[-1]))
+    data <- data.frame(apply(rbind(1 - apply(data, 2, min), data), 2, function(x) x[1] + x[-1])) #anchor at 1
 
     formulaList <-
       names(data) %>%
@@ -35,7 +37,7 @@ getLambda <-
       if(parallel){
         formulaList %>% ddR::dlapply(function(x)
           MASS::boxcox(x, data = data, lambda = lambda, plotit = FALSE),
-                nparts = parallel::detectCores()) %>%
+                nparts = min(parallel::detectCores(), ncol(data))) %>%
           ddR::collect()
       } else {
         formulaList %>% purrr::map(function(x)

@@ -57,16 +57,14 @@ server <- function(input, output) {
     read.csv(inFile$datapath, header=input$header, sep=input$sep)
   })
 
-
   output$data <-renderTable({
     oldData()
 
   })
 
-
   lambda <-
     reactive({
-      getLambda(req(oldData()), parallel = FALSE)
+      getLambda(req(oldData()))
     })
 
 
@@ -84,7 +82,6 @@ server <- function(input, output) {
 
     normaliseData(oldData(), lambda())
   })
-
 
   output$newdata <-renderTable({
 

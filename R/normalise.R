@@ -16,12 +16,13 @@ normalise <- function(x, lambda = 3){
     if(lambda == 0){
       log(x)
     }else if (lambda < 0){
-      if(min(x) <=0 )
-        x <- x + (1-min(x)) #anchor
-
-      temp <- -(x^(lambda))
-
-      temp+(1-min(temp))
+        if(min(x) <= 0){
+          temp <- x + (1-min(x)) #anchor
+          temp <- -(temp^(lambda)) #applied and reflected
+        } else {
+          temp <- -(x^(lambda)) #applied and reflected
+        }
+        temp+(1-min(temp)) #pegged
     }else{
       x^lambda
     }

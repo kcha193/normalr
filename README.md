@@ -29,3 +29,13 @@ library(normalr)
 
 normaliseData(mtcars, getLambda(mtcars))
 ```
+
+## Shiny apps
+
+The following example run a shiny appliaction uses normalr to normalise any dataset that the user input.
+
+```R
+library(normalr)
+
+normalrShiny()
+```
