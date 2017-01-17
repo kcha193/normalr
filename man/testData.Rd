@@ -4,7 +4,7 @@
 \name{testData}
 \alias{testData}
 \title{Test dataset for the paper}
-\format{An object of class \code{data.frame} with 479 rows and 8 columns.}
+\format{An object of class \code{data.frame} with 957 rows and 9 columns.}
 \usage{
 testData
 }
