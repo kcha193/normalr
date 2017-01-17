@@ -1,3 +1,6 @@
+# normalr 0.0.3
+* embed a test dataset for the paper.
+
 # normalr 0.0.2
 
 * add the shiny app using `normalrShiny()`.

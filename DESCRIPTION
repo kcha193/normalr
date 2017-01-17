@@ -1,6 +1,6 @@
 Package: normalr
 Title: Normalisation of Multiple Variables in Large-Scale Datasets
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(person("Kevin", "Chang", email = "k.chang@auckland.ac.nz", role = c("aut", "cre")), 
              person("Matthew", "Courtney", email = "matthew.courtney@unimelb.edu.au", role = c("aut")))
 Description: The robustness of many of the statistical techniques, such as factor analysis, applied in 
@@ -9,7 +9,7 @@ Description: The robustness of many of the statistical techniques, such as facto
           <http://www.jstor.org/stable/2984418> provides an optimal transformation for non-normal variables. Yet, for 
           large datasets of continuous variables, its application in current software programs is cumbersome
           with analysts having to take several steps to normalise each variable. We present an R package 
-          normalr that enables researchers to make convenient optimal transformations of multiple variables
+          'normalr' that enables researchers to make convenient optimal transformations of multiple variables
           in datasets. This R package enables users to quickly and accurately: (1) anchor all of their 
           variables at 1.00, (2) select the desired precision with which the optimal lambda is estimated, 
           (3) apply each unique exponent to its variable, (4) rescale resultant values to within their 

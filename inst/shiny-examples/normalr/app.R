@@ -11,6 +11,7 @@ ui <- fluidPage(
   titlePanel("normalr R package"),
   sidebarLayout(
     sidebarPanel(
+      checkboxInput('testData', 'Use test Dataset', FALSE),
       fileInput('file1', 'Choose CSV File',
                 accept=c('text/csv',
                          'text/comma-separated-values,text/plain',
@@ -48,6 +49,8 @@ server <- function(input, output) {
 
 
   oldData <- reactive({
+
+    if(input$testData) return(testData)
 
     inFile <- input$file1
 
