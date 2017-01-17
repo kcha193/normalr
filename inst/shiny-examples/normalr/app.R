@@ -16,7 +16,6 @@ ui <- fluidPage(
                 accept=c('text/csv',
                          'text/comma-separated-values,text/plain',
                          '.csv')),
-      tags$hr(),
       checkboxInput('header', 'Header', TRUE),
       radioButtons('sep', 'Separator',
                    c(Comma=',',
