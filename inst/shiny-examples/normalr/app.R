@@ -24,7 +24,7 @@ ui <- fluidPage(
                    ','),
       downloadButton('downloadData', 'Download'),
       h3("Latest Update:"),
-      h4("2017-01-03"),
+      h4("2017-01-17"),
       h3("Contact email:"),
       a("k.chang@auckland.ac.nz",
         href= "mailto:k.chang@auckland.ac.nz")
