@@ -23,4 +23,3 @@ Computes optimal lambda value using \link[MASS]{boxcox} function from the provid
 \dontrun{ getLambda(mtcars)}
 getLambda(mtcars, parallel = FALSE)
 }
-

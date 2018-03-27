@@ -15,4 +15,3 @@ Shiny application of the normalr
 \examples{
 \dontrun{normalrShiny()}
 }
-
