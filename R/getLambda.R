@@ -37,7 +37,6 @@ getLambda <-
           purrr::map(function(x)
             as.formula(paste(x, paste(names(dat)[!names(dat) %in% x], collapse = "+"), sep = "~")))
       }
-browser()
 
     lambdasList <-
       if(ncol(dat) == 1){

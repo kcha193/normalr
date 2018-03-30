@@ -1,10 +1,12 @@
 name: normalr
 title: normalr
+username:
 account: kcha193
 server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
 appId: 148824
-bundleId: 681567
+bundleId: 1294440
 url: https://kcha193.shinyapps.io/normalr/
-when: 1484617394.2725
+when: 1522374076.43602
 asMultiple: FALSE
 asStatic: FALSE

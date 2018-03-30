@@ -1,3 +1,10 @@
+
+
+# normalr 1.0.0
+* remove ddR package, due to this package is being archived.
+* add rlang package for checking the class of variables are numeric.
+* add the citation of the published paper.
+
 # normalr 0.0.3
 * embed a test dataset for the paper.
 
@@ -11,7 +18,7 @@
 * First release with three main functions: 
   * `getLambda()` compute the lambda values based on the dataset.
   * `normalise()` normalised a numeric vector with the specific lambda value.
-  * `normaliseData()` applies the normalisation on a dataset with multiple continous variables.
+  * `normaliseData()` applies the normalisation on a dataset with multiple continuous variables.
 
 
 
