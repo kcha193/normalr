@@ -9,7 +9,7 @@
 #'
 #' @return a numeric vector
 #' @references {
-#' Courtney, M. G. R., and Chang, K. C. (2018) Dealing with non‐normality: an introduction and step‐by‐step guide using R. TEST.
+#' Courtney, M. G. R., and Chang, K. C. (2018) Dealing with non‐normality: an introduction and step-by-step guide using R. TEST, doi: 10.1111/test.12154.
 #' }
 #' @importFrom purrr keep map map_dbl
 #' @importFrom rlang is_bare_numeric

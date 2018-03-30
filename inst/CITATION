@@ -6,5 +6,5 @@ citEntry(entry = "Article",
   year = "2018",
   doi = "10.1111/test.12154",
   journal = "Teaching Statistics",
-  textVersion = "Courtney, M. G. R., and Chang, K. C. (2018) Dealing with non‐normality: an introduction and step‐by‐step guide using R. TEST, doi: 10.1111/test.12154."
+  textVersion = "Courtney, M. G. R., and Chang, K. C. (2018) Dealing with non‐normality: an introduction and step-by-step guide using R. TEST, doi: 10.1111/test.12154."
 )
