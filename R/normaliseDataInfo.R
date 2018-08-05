@@ -21,7 +21,7 @@ normaliseDataInfo <-
 
     res <- apply(rbind(lambdas, dat), 2, function(x) normalise(x[-1], x[1]))
 
-    list(lambdas = lambdas,
+    list(lambdas =  res[1,],
          scaled = res[2,],
          transDat = as.data.frame(res[-c(1:2), ]))
   }
