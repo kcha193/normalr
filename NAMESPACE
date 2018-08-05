@@ -3,6 +3,7 @@
 export(getLambda)
 export(normalise)
 export(normaliseData)
+export(normaliseDataInfo)
 export(normalrShiny)
 import(shiny)
 importFrom(magrittr,"%>%")

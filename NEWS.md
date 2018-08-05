@@ -1,4 +1,6 @@
 
+# normalr 1.0.1
+* added normaliseDataInfo() which will also output the lambdas and scaled with the transformed varaibles.
 
 # normalr 1.0.0
 * remove ddR package, due to this package is being archived.

@@ -21,3 +21,8 @@ Apply normalisation on a data frame using specific Lambda value
 \dontrun{normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))}
 normaliseData(mtcars, getLambda(mtcars, parallel = FALSE))
 }
+\references{
+{
+Courtney, M. G. R., and Chang, K. C. (2018) Dealing with non-normality: an introduction and step-by-step guide using R. TEST, doi: 10.1111/test.12154.
+}
+}
