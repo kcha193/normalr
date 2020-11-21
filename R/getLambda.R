@@ -43,7 +43,18 @@ getLambda <-
         MASS::boxcox(formulaList, data = dat, lambda = lambda, plotit = FALSE)
       } else if(parallel){
 
-        cl <- parallel::makeCluster(min(parallel::detectCores(), ncol(dat)))
+
+        chk <- Sys.getenv("_R_CHECK_LIMIT_CORES_", "")
+
+        if (nzchar(chk) && chk == "TRUE") {
+          # use 2 cores in CRAN/Travis/AppVeyor
+          num_workers <- 2L
+        } else {
+          # use all cores in devtools::test()
+          num_workers <- min(parallel::detectCores(), ncol(dat))
+        }
+
+        cl <- parallel::makeCluster(num_workers)
 
         res <-
         parallel::parLapply(cl, formulaList, function(x)

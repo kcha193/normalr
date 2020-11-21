@@ -29,6 +29,10 @@ test_that("multiplication works", {
 
   expect_equal(length(res), 3)
 
+
+# Test in parallel --------------------------------------------------------
+
+
   lambdas <-
     getLambda(mtcars, parallel = FALSE)
 
