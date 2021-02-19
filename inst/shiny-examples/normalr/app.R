@@ -26,8 +26,8 @@ ui <- fluidPage(
       h3("Latest Update:"),
       h4("2018-03-30"),
       h3("Contact email:"),
-      a("k.chang@auckland.ac.nz",
-        href= "mailto:k.chang@auckland.ac.nz")
+      a("kcha193@aucklanduni.ac.nz",
+        href= "mailto:kcha193@aucklanduni.ac.nz")
     ),
 
     mainPanel(
